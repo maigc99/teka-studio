@@ -1,5 +1,5 @@
 :root{
-    font-family: Barlow, sans-serif;
+    font-family: 'Barlow', sans-serif;
     width: 100%;
  }
   
@@ -7,98 +7,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    line-height: normal;
  }
 
 
 /* - - - - CONTENEDORES - - - - */
 
-.contenedor {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: repeat(6 auto);
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "header header header header header header"
-    "main main main main main main"
-    "footer footer footer footer footer footer"
-    ;
-} 
-
-.contenedor-home {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: repeat(6 auto);
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 
-    "header header header header header header"
-    "hero hero hero hero hero hero"
-    "main main main main main main"
-    "footer footer footer footer footer footer"
-    ;
-}
-  
-.contenedor-header {
-    grid-area: header;
-    align-content: start;
-    position: sticky;
-    top: 0px;
-    width: 100vw;
-    z-index: 100000000;
+.container-fluid {
+    margin: 0;
+    padding: 0;
 }
 
-.contenedor-hero {
-    grid-area: hero;
-    width: 100vw;
-    z-index: 4;
-}
-
-.contenedor-main {
-    grid-area: main;
-    width: 100vw;
-    z-index: 3;
-}
-
-.contenedor-footer {
-    grid-area: footer;
-    width: 100vw;
-    z-index: 2;
+.row {
+    margin: 0;
+    padding: 0;
 }
 
   
  /* - - - - HEADER - - - - */
   
  .header {
-    height: 80px;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    height: 75px;
+    width: 100vw;
     position: sticky;
     top: 0px;
     background-color: white;
     opacity: 100%;
     z-index: 1000000;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-top: 8px;
+    padding-left: 110px;
+    padding-right: 100px;
     box-shadow: 0px 1px 20px 0px rgb(105, 102, 102);
  }
   
  .logo-header {
     display: inline-block;
-    margin-top: 10px;
     margin-left: -10px;
  }
   
  .menu {
     list-style: none;
     font-size: 0;
-    margin-top: 30px;
     z-index: 1000000;
+    justify-content: end;
  }
   
  .menu li {
     display: inline-block;
-    padding-left: 60px;
+    padding-left: 50px;
  }
   
  .menu a{
@@ -111,6 +68,13 @@
  .menu a:hover {
     font-weight: 700;
     color: #141e30;
+ }
+
+ .navbar-toggler {
+    color: #05070b;
+    border-style: none;
+    width: 60px;
+    text-align: center;
  }
   
   
@@ -427,37 +391,46 @@
     margin-bottom: 80px;
  }
   
- .servicio {
+ .card {
     width: 250px;
     height: auto;
     display: flex;
     flex-flow: column wrap;
+    border-style: none;
+ }
+
+ .card-body {
+    width: 280px;
  }
   
- .servicio h3 {
+ .card-title {
     line-height: 40px;
  }
   
- .servicio p {
+ .card-text {
     margin-top: 18px;
  }
   
- .servicio a{
+ .card-body a{
     font-size: 21px;
     font-weight: 600;
     text-decoration: none;
     color: #ff4a0b;
-    margin-top: 40px;
+    margin-top: 20px;
+    background-color: transparent;
+    border-style: none;
+    padding: 0%;
  }
   
- .servicio a:hover {
+ .card-body a:hover {
     font-weight: 700;
     color: #141e30;
+    background-color: transparent;
  }
   
  .icono-servicio {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
  }
   
  .icono-servicio img {
@@ -473,6 +446,29 @@
  .titulo-sec-sub h4 span {
     color: #ff4a0b;
     margin-bottom: 2px;
+ }
+
+ .carousel-caption {
+    background-color: #141e30;
+    background-blend-mode: darken;
+    border-radius: 15px;
+ }
+
+ .carousel-caption h2 {
+    color: white;
+    opacity: 100%;
+ }
+
+ .carousel-caption p {
+    color: white;
+    text-align: center;
+    opacity: 100%;
+ }
+
+ .carousel-works {
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 150px;
  }
   
  .project .titulo-sec-sub h2 {
@@ -514,6 +510,8 @@
     color: white;
     font-size: 16px;
     font-weight: 500;
+    padding: 0;
+    margin-bottom: 2px;
  }
   
  .foto-project img {
@@ -550,6 +548,7 @@
     border-style: solid;
     border-width: 1px;
     margin-bottom: 80px;
+    opacity: 100%;
  }
   
  .works .bloque-cta {
@@ -711,11 +710,14 @@
     letter-spacing: 2px;
     color: #ff4a0b;
     text-align: left;
+    margin-top: -15px;
     margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: white;
+    width: auto;
  }
   
  .personal-info label {
@@ -782,53 +784,15 @@
 
     /* - - - - CONTENEDORES - - - - */
 
-    .contenedor {
-        display: grid;
-        width: 100vw;
-        grid-template-columns: 1 auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 
-        "header"
-        "main"
-        "footer"
-        ;
-    } 
-    
-    .contenedor-home {
-        display: grid;
-        width: 100vw;
-        grid-template-columns: 1 auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: 
-        "header"
-        "hero"
-        "main"
-        "footer"
-        ;
+    .container-fluid {
+        margin: 0;
+        padding: 0;
     }
-      
-    .contenedor-header {
-        grid-area: header;
-        width: 100vw;
-        position: sticky;
-        top: 0px;
-        z-index: 10000;
+
+    .row {
+        margin: 0;
+        padding: 0;
     }
-    
-    .contenedor-hero {
-        grid-area: hero;
-        width: 100vw;
-    }
-    
-    .contenedor-main {
-        grid-area: main;
-        width: 100vw;
-    }
-    
-    .contenedor-footer {
-        grid-area: footer;
-        width: 100vw;
-    } 
 
 
      /* - - - - HEADER - - - - */
@@ -838,8 +802,9 @@
         width: 100vw;
         display: flex;
         flex-flow: column wrap;
+        padding-top: 0px;
         padding-left: 40px;
-        padding-right: 40px;
+        padding-right: 20px;
         box-shadow: 0px 1px 20px 0px rgb(105, 102, 102);
         z-index: 10000;
     }
@@ -848,8 +813,8 @@
         display: flex;
         justify-content: flex-start;
         width: auto;
-        margin-left: -5px;
-        margin-top: 10px;
+        margin-left: -15px;
+        margin-top: 0px;
     }
 
     .logo-header img {
@@ -982,6 +947,8 @@
 
     .bloque-hero {
         padding: 100px 40px 70px 40px;
+        background-size: auto;
+        background-blend-mode: normal;
     }
     
     .texto-hero {
@@ -1027,7 +994,7 @@
     /* - - - - BLOQUE1 (HOME) - - - - */
     
     #home-bloque1 {
-        padding-top: 150px;
+        padding-top: 120px;
         width: auto;
         margin-bottom: 80px;
     }
@@ -1114,30 +1081,35 @@
         margin-bottom: 0px;
     }
     
-    .servicio {
+    .card {
         width: 156px;
         height: auto;
         display: flex;
         flex-flow: column wrap;
         margin-bottom: 50px;
     }
+
+    .card-body {
+        width: 156px;
+        padding: 0;
+    }
     
-    .servicio h3 {
+    .card-title {
         line-height: 25px;
     }
     
-    .servicio p {
+    .card-text {
         margin-top: 10px;
     }
     
-    .servicio a{
+    .card a{
         font-size: 14px;
-        margin-top: 30px;
+        margin-top: 10px;
     }
     
     .icono-servicio {
         text-align: left;
-        margin-bottom: 21px;
+        margin-bottom: 25px;
     }
     
     .icono-servicio img {
@@ -1154,6 +1126,13 @@
         color: #ff4a0b;
         margin-bottom: 0px;
     }
+
+    .carousel-works {
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 100px;
+        margin-top: 30px;
+     }
     
     .project .titulo-sec-sub h2 {
         margin-top: 5px;
@@ -1379,6 +1358,7 @@
     .personal-info legend {
         font-size: 14px;
         letter-spacing: 1px;
+        margin-top: -10px;
         margin-bottom: 30px;
         margin-left: 24px;
         margin-right: 24px;
