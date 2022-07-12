@@ -1,0 +1,708 @@
+@charset "UTF-8";
+/* - - - - VARS - - - - */
+/* colores */
+/* tipografia */
+/* - - - - SCSS - - - - */
+:root {
+  font-family: "Barlow", sans-serif;
+  width: 100%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  line-height: normal; }
+
+/* - - - - CONTENEDORES - - - - */
+contenedor {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(6 auto);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header header header header" "main main main main main main" "footer footer footer footer footer footer"; }
+
+contenedor-home {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(6 auto);
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header header header header header" "hero hero hero hero hero hero" "main main main main main main" "footer footer footer footer footer footer"; }
+
+contenedor-hero {
+  grid-area: hero;
+  width: 100vw;
+  z-index: 4; }
+
+contenedor-main {
+  grid-area: main;
+  width: 100vw;
+  z-index: 3; }
+
+contenedor-footer {
+  grid-area: footer;
+  width: 100vw;
+  z-index: 2; }
+
+container-fluid {
+  margin: 0;
+  padding: 0; }
+
+row {
+  margin: 0;
+  padding: 0; }
+
+/* - - - - HEADER - - - - */
+header {
+  height: 75px;
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  opacity: 100%;
+  z-index: 1000000;
+  padding-top: 8px;
+  padding-left: 110px;
+  padding-right: 100px;
+  box-shadow: 0px 1px 20px 0px #696666; }
+
+logo-header {
+  display: inline-block;
+  margin-left: -10px; }
+
+menu {
+  list-style: none;
+  font-size: 0;
+  z-index: 1000000;
+  justify-content: end; }
+  menu li {
+    display: inline-block;
+    padding-left: 50px; }
+  menu a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #05070b; }
+    menu a:hover {
+      font-weight: 700;
+      color: #141e30; }
+
+navbar-toggler {
+  color: #05070b;
+  border-style: none;
+  width: 60px;
+  text-align: center; }
+
+/* - - - - TÍTULOS Y TEXTOS - - - - */
+h1 {
+  font-size: 55px;
+  font-weight: 500;
+  color: #ff4a0b; }
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #141e30; }
+
+h3 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #141e30;
+  line-height: normal; }
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 21px;
+  width: 600px; }
+
+p {
+  font-size: 18px;
+  font-weight: 400; }
+
+destacado-naranja {
+  color: #ff4a0b; }
+
+/* - - - - BOTONES - - - - */
+btn-ppales {
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  border-color: none;
+  border-width: 0px;
+  background-color: #ff4a0b;
+  padding: 14px 88px;
+  cursor: pointer; }
+  btn-ppales:hover {
+    outline: #ff4a0b solid 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #ff4a0b;
+    font-weight: 700;
+    transition: 0.3s; }
+
+btn-secundarios {
+  font-family: Barlow, sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #141e30;
+  padding: 14px 88px;
+  color: white;
+  cursor: pointer; }
+  btn-secundarios:hover {
+    outline: #141e30 solid 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #141e30;
+    font-weight: 700;
+    transition: 0.3s; }
+
+bloque-cta-btn {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center; }
+
+/* - - - - MAIN - - - - */
+main {
+  background-image: url(../multimedia/fondo-teka2.png);
+  background-size: contain;
+  padding-left: 120px;
+  padding-right: 120px; }
+
+intro-section {
+  margin-top: 80px;
+  margin-bottom: 80px; }
+  intro-section h1 {
+    margin-bottom: 10px;
+    font-weight: 600; }
+  intro-section h3 {
+    width: 800px; }
+
+/* - - - - FOOTER - - - - */
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  background-color: #141e30;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  padding: 40px 120px 40px 120px;
+  width: 100%; }
+
+copy-footer {
+  align-content: center; }
+  copy-footer p {
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 0px; }
+
+redes-footer {
+  margin-top: 20px;
+  align-content: center;
+  text-align: center;
+  box-sizing: 350px; }
+  redes-footer a {
+    align-content: space-evenly;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px; }
+    redes-footer a img:hover {
+      width: 30px;
+      height: auto; }
+
+/* - - - - MEDIA QUERIES (MOBILE) SCSS - - - - */
+@media screen and (max-width: 500px) {
+  /* - - - - CONTENEDORES - - - - */
+  contenedor {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1 auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "main" "footer"; }
+  contenedor-home {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1 auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "hero" "main" "footer"; }
+  contenedor-hero {
+    grid-area: hero;
+    width: 100vw; }
+  contenedor-main {
+    grid-area: main;
+    width: 100vw; }
+  contenedor-footer {
+    grid-area: footer;
+    width: 100vw; }
+  /* - - - - HEADER - - - - */
+  header {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0px 20px 5px 40px;
+    box-shadow: 0px 1px 20px 0px #696666;
+    z-index: 10000; }
+  logo-header {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    margin-left: -15px;
+    margin-top: 0px;
+    padding-top: 3px; }
+    logo-header img {
+      height: 40px;
+      width: auto;
+      margin-top: 5px; }
+  menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%; }
+    menu li {
+      display: inline-block;
+      padding-bottom: 0px;
+      padding-left: 20px;
+      text-align: center; }
+    menu a {
+      font-size: 12px;
+      text-align: center; }
+  navbar-toggler {
+    margin-top: 10px; }
+  /* - - - - TÍTULOS Y TEXTOS - - - - */
+  h1 {
+    font-size: 40px; }
+  h2 {
+    font-size: 25px; }
+  h3 {
+    font-size: 21px; }
+  h4 {
+    font-size: 16px;
+    width: auto; }
+  p {
+    font-size: 12px; }
+  /* - - - - BOTONES - - - - */
+  btn-ppales {
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 42px 14px 42px; }
+  btn-secundarios {
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 42px 14px 42px; }
+  bloque-cta-btn {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center; }
+  /* - - - - MAIN - - - - */
+  main {
+    padding-left: 40px;
+    padding-right: 40px; }
+  intro-section {
+    margin-top: 80px;
+    margin-bottom: 70px; }
+    intro-section h1 {
+      margin-bottom: 10px;
+      font-weight: 600; }
+    intro-section h3 {
+      width: auto; }
+  /* - - - - FOOTER - - - - */
+  footer {
+    font-size: 12px;
+    padding: 30px 100px;
+    width: 100%; }
+  redes-footer {
+    margin-top: 30px;
+    box-sizing: 250px; }
+    redes-footer a {
+      align-content: space-evenly;
+      text-align: center;
+      padding-right: 5px;
+      padding-left: 5px; } }
+
+/* - - - - PARTIALS - - - - */
+/* home */
+/* - - - - bloque hero - - - - */
+bloque-hero {
+  background-image: url(../multimedia/fondo-teka1.png);
+  background-size: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  padding: 145px 120px 80px 100px; }
+  bloque-hero h1 {
+    color: white;
+    margin-top: -10px; }
+  bloque-hero h3 {
+    margin-top: 32px;
+    color: white; }
+
+texto-hero {
+  width: 45%;
+  justify-content: flex-start;
+  color: white;
+  padding-top: 5px;
+  padding-left: 20px; }
+
+video-hero {
+  justify-content: flex-end; }
+  video-hero iframe {
+    width: 726px;
+    height: 365px;
+    border-radius: 10px;
+    border-width: 0px;
+    border-style: none;
+    box-shadow: 5px 5px 20px 0px #05070b; }
+
+intro-hero {
+  display: flex;
+  justify-content: space-between; }
+
+cta-hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 115px; }
+
+/* - - - - BLOQUE1 (HOME) - - - - */
+home-bloque1 {
+  padding-top: 160px;
+  width: auto;
+  margin-bottom: 160px; }
+
+home-projects-slider {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  margin-top: 70px;
+  overflow-x: scroll;
+  gap: 30px; }
+  home-projects-slider pj-slide {
+    width: auto; }
+    home-projects-slider pj-slide img {
+      width: 382px;
+      border-radius: 15px; }
+  home-projects-slider bloque-cta {
+    margin-left: 60px;
+    margin-right: 40px;
+    padding: 0px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center; }
+    home-projects-slider bloque-cta h3 {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 40px; }
+  home-projects-slider bloque-cta-btn {
+    width: 350px;
+    text-align: center; }
+
+/* - - - - BLOQUE 2 (HOME) - - - - */
+home-bloque2 {
+  width: auto;
+  overflow: auto;
+  margin-bottom: 160px; }
+
+featured-clients {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 60px;
+  margin-top: 80px; }
+  featured-clients img {
+    width: auto;
+    height: 80px;
+    opacity: 80%; }
+
+/* - - - - BLOQUE 3 (HOME) - - - - */
+home-bloque3 {
+  padding-bottom: 200px; }
+  home-bloque3 bloque-cta {
+    margin-top: 90px; }
+
+main-servicios {
+  margin-top: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 80px; }
+  main-servicios servicio {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap; }
+    main-servicios servicio h3 {
+      line-height: 40px;
+      margin-bottom: 0px; }
+    main-servicios servicio p {
+      margin-top: 18px; }
+    main-servicios servicio a {
+      font-size: 21px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ff4a0b;
+      margin-top: 20px; }
+      main-servicios servicio a:hover {
+        font-weight: 700;
+        color: #141e30;
+        font-size: 23px; }
+
+icono-servicio {
+  text-align: center;
+  margin-bottom: 40px; }
+  icono-servicio:hover {
+    transform: scale(110%); }
+  icono-servicio img {
+    width: 180px;
+    border-radius: 15px;
+    box-shadow: 7px 7px 15px 0px #d7d4d4; }
+
+/* - - - - MEDIA QUERIES (HOME) - - - - */
+/* - - - - MOBILE- - - - */
+@media screen and (max-width: 500px) {
+  /* - - - - bloque hero - - - - */
+  bloque-hero {
+    padding: 100px 40px 70px 40px;
+    background-size: auto;
+    background-blend-mode: normal; }
+    bloque-hero h1 {
+      margin-top: 0px; }
+    bloque-hero h3 {
+      margin-top: 21px; }
+  texto-hero {
+    width: auto;
+    justify-content: start;
+    padding-top: 5px;
+    margin-left: -20px; }
+  video-hero {
+    justify-content: center; }
+    video-hero iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px 0px #05070b; }
+  intro-hero {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 60px;
+    justify-content: center; }
+  cta-hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px; }
+  /* - - - - BLOQUE1 (HOME) - - - - */
+  home-bloque1 {
+    padding-top: 130px;
+    width: auto;
+    margin-bottom: 80px; }
+  home-projects-slider {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    overflow-x: scroll;
+    gap: 10px; }
+    home-projects-slider pj-slide {
+      width: auto; }
+      home-projects-slider pj-slide img {
+        width: 156px;
+        border-radius: 10px; }
+    home-projects-slider bloque-cta {
+      margin-left: 60px;
+      margin-right: 40px;
+      padding: 0px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-content: center; }
+      home-projects-slider bloque-cta h3 {
+        margin-bottom: 20px; }
+    home-projects-slider bloque-cta-btn {
+      width: 200px;
+      text-align: center; }
+  /* - - - - BLOQUE 2 (HOME) - - - - */
+  home-bloque2 {
+    width: auto;
+    overflow: auto;
+    margin-bottom: 90px; }
+  featured-clients {
+    flex-flow: column wrap;
+    gap: 40px;
+    margin-top: 60px; }
+    featured-clients img {
+      height: 50px; }
+  /* - - - - BLOQUE 3 (HOME) - - - - */
+  home-bloque3 {
+    padding-bottom: 100px; }
+    home-bloque3 bloque-cta {
+      margin-top: 20px;
+      width: 100%; }
+  main-servicios {
+    margin-top: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px; }
+  servicio {
+    width: 156px;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 50px; }
+    servicio h3 {
+      line-height: 25px; }
+    servicio p {
+      margin-top: 10px; }
+    servicio a {
+      font-size: 14px;
+      margin-top: 15px; }
+  icono-servicio {
+    text-align: left;
+    margin-bottom: 25px; }
+    icono-servicio img {
+      width: 156px;
+      border-radius: 10px;
+      box-shadow: 7px 7px 15px 0px #d7d4d4; } }
+
+/* our work */
+/* - - - - OUR WORK - - - - */
+titulo-sec-sub h4 span {
+  color: #ff4a0b;
+  margin-bottom: 2px; }
+
+project titulo-sec-sub {
+  margin-bottom: 60px; }
+  project titulo-sec-sub h2 {
+    margin-top: 5px; }
+  project titulo-sec-sub h4 {
+    margin-top: 21px; }
+
+project hr {
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 80px;
+  opacity: 100%; }
+
+project-info {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 80px; }
+
+project-tags {
+  margin-top: 16px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 7px; }
+
+tag {
+  height: auto;
+  width: auto;
+  padding: 7px 12px;
+  background-color: #141e30;
+  border-radius: 7px;
+  opacity: 90%; }
+  tag p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 2px; }
+
+foto-project img {
+  width: 726px;
+  height: auto;
+  box-shadow: 7px 7px 15px 0px #d7d4d4;
+  border-radius: 15px; }
+
+about-project {
+  width: 600px; }
+  about-project h3 {
+    font-weight: 600;
+    margin-bottom: 21px; }
+
+project-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 25px;
+  margin-bottom: 140px; }
+  project-gallery img {
+    width: 444px;
+    height: auto;
+    border-radius: 15px; }
+
+works bloque-cta {
+  padding-bottom: 180px; }
+
+/* MEDIA QUERIES (MOBILE) OUR WORK */
+@media screen and (max-width: 500px) {
+  titulo-sec-sub h4 span {
+    color: #ff4a0b;
+    margin-bottom: 0px; }
+  project titulo-sec-sub {
+    margin-bottom: 40px; }
+    project titulo-sec-sub h2 {
+      margin-top: 5px; }
+    project titulo-sec-sub h4 {
+      margin-top: 16px; }
+  project hr {
+    margin-bottom: 50px; }
+  project-info {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 32px; }
+  project-tags {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 7px; }
+  tag {
+    padding: 7px 12px;
+    border-radius: 5px; }
+    tag p {
+      font-size: 12px; }
+  foto-project img {
+    width: 100%;
+    height: auto;
+    box-shadow: 7px 7px 15px 0px #d7d4d4;
+    border-radius: 10px; }
+  about-project {
+    width: 100%;
+    margin-bottom: 50px; }
+    about-project h3 {
+      margin-bottom: 16px; }
+  project-gallery {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    margin-bottom: 80px; }
+    project-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px; }
+  works bloque-cta {
+    padding-bottom: 100px;
+    width: 100%; } }
