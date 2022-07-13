@@ -33,7 +33,7 @@ $font: 'Barlow', sans-serif;
 
 /* - - - - CONTENEDORES - - - - */
 
-contenedor {
+.contenedor {
     display: grid;
     width: 100vw;
     grid-template-columns: repeat(6 auto);
@@ -45,7 +45,7 @@ contenedor {
     ;
 } 
 
-contenedor-home {
+.contenedor-home {
     display: grid;
     width: 100vw;
     grid-template-columns: repeat(6 auto);
@@ -58,36 +58,36 @@ contenedor-home {
     ;
 }
 
-contenedor-hero {
+.contenedor-hero {
     grid-area: hero;
     width: 100vw;
     z-index: 4;
 }
 
-contenedor-main {
+.contenedor-main {
     grid-area: main;
     width: 100vw;
     z-index: 3;
 }
 
-contenedor-footer {
+.contenedor-footer {
     grid-area: footer;
     width: 100vw;
     z-index: 2;
 }
 
-container-fluid {
+.container-fluid {
     margin: 0;
     padding: 0;
 }
 
-row {
+.row {
     margin: 0;
     padding: 0;
 }
 
   
- /* - - - - HEADER - - - - */
+/* - - - - HEADER - - - - */
   
 header {
     height: 75px;
@@ -103,12 +103,12 @@ header {
     box-shadow: 0px 1px 20px 0px rgb(105, 102, 102);
 }
   
-logo-header {
+.logo-header {
     display: inline-block;
     margin-left: -10px;
  }
   
-menu {
+.menu {
     list-style: none;
     font-size: 0;
     z-index: 1000000;
@@ -132,7 +132,7 @@ menu {
     }
 }
 
-navbar-toggler {
+.navbar-toggler {
     color: $azul-ppal;
     border-style: none;
     width: 60px;
@@ -173,14 +173,14 @@ p {
     font-weight: 400;
 }
   
-destacado-naranja {
+.destacado-naranja {
     color: $naranja;
 }
   
   
 /* - - - - BOTONES - - - - */
   
-btn-ppales {
+.btn-ppales {
     font-family: $font;
     letter-spacing: 2px;
     font-size: 20px;
@@ -205,7 +205,7 @@ btn-ppales {
      }
 }
 
-btn-secundarios {
+.btn-secundarios {
     font-family: Barlow, sans-serif;
     letter-spacing: 2px;
     font-size: 20px;
@@ -228,7 +228,7 @@ btn-secundarios {
      }
 }
 
-bloque-cta-btn {
+.bloque-cta-btn {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
@@ -245,7 +245,7 @@ main {
     padding-right: 120px;
 }
   
-intro-section {
+.intro-section {
     margin-top: 80px;
     margin-bottom: 80px;
 
@@ -274,7 +274,7 @@ footer {
     width: 100%;
 }
   
-copy-footer {
+.copy-footer {
     align-content: center;
 
     p {
@@ -284,7 +284,7 @@ copy-footer {
     }
 }
   
-redes-footer {
+.redes-footer {
     margin-top: 20px;
     align-content: center;
     text-align: center;
@@ -310,7 +310,7 @@ redes-footer {
 
     /* - - - - CONTENEDORES - - - - */
 
-    contenedor {
+    .contenedor {
         display: grid;
         width: 100vw;
         grid-template-columns: 1 auto;
@@ -322,7 +322,7 @@ redes-footer {
         ;
     } 
     
-    contenedor-home {
+    .contenedor-home {
         display: grid;
         width: 100vw;
         grid-template-columns: 1 auto;
@@ -335,17 +335,17 @@ redes-footer {
         ;
     }
     
-    contenedor-hero {
+    .contenedor-hero {
         grid-area: hero;
         width: 100vw;
     }
     
-    contenedor-main {
+    .contenedor-main {
         grid-area: main;
         width: 100vw;
     }
     
-    contenedor-footer {
+    .contenedor-footer {
         grid-area: footer;
         width: 100vw;
     } 
@@ -363,7 +363,7 @@ redes-footer {
         z-index: 10000;
     }
     
-    logo-header {
+    .logo-header {
         display: flex;
         justify-content: flex-start;
         width: auto;
@@ -378,7 +378,7 @@ redes-footer {
         }
     }
     
-    menu {
+    .menu {
         display: flex;
         justify-content: center;
         list-style: none;
@@ -399,7 +399,7 @@ redes-footer {
         }
     }
 
-    navbar-toggler {
+    .navbar-toggler {
         margin-top: 10px;
     }
     
@@ -430,21 +430,21 @@ redes-footer {
 
     /* - - - - BOTONES - - - - */
   
-    btn-ppales {
+    .btn-ppales {
         letter-spacing: 1px;
         font-size: 16px;
         border-radius: 7px;
         padding: 12px 42px 14px 42px;
     }
     
-    btn-secundarios {
+    .btn-secundarios {
         letter-spacing: 1px;
         font-size: 16px;
         border-radius: 7px;
         padding: 12px 42px 14px 42px;
     }
     
-    bloque-cta-btn {
+    .bloque-cta-btn {
         display: flex;
         flex-flow: row wrap;
         gap: 20px;
@@ -459,7 +459,7 @@ redes-footer {
         padding-right: 40px;
     }
     
-    intro-section {
+    .intro-section {
         margin-top: 80px;
         margin-bottom: 70px;
 
@@ -482,7 +482,7 @@ redes-footer {
         width: 100%;
     }
     
-    redes-footer {
+    .redes-footer {
         margin-top: 30px;
         box-sizing: 250px;
 
@@ -507,4 +507,18 @@ redes-footer {
 /* our work */
 
 @import "ourwork";
+
+/* our services */
+
+@import "ourservices";
+
+/* about us */
+
+@import "aboutus";
+
+/* contact us */
+
+@import "contactus";
+
+
 

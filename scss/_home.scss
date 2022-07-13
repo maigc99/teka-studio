@@ -1,7 +1,7 @@
 
 /* - - - - bloque hero - - - - */
 
-bloque-hero {
+.bloque-hero {
     background-image: url(../multimedia/fondo-teka1.png);
     background-size: 100%;
     height: 100%;
@@ -11,15 +11,15 @@ bloque-hero {
     h1 {
         color: white;
         margin-top: -10px;
-     }
+    }
 
-     h3 {
+    h3 {
         margin-top: 32px;
         color: white;
-     }
+    }
 }
   
-texto-hero {
+.texto-hero {
     width: 45%;
     justify-content: flex-start;
     color: white;
@@ -27,7 +27,7 @@ texto-hero {
     padding-left: 20px;
 }
   
-video-hero {
+.video-hero {
     justify-content: flex-end;
 
     iframe {
@@ -37,15 +37,15 @@ video-hero {
         border-width: 0px;
         border-style: none;
         box-shadow: 5px 5px 20px 0px #05070b;
-     }
+    }
 }
   
-intro-hero {
+.intro-hero {
     display: flex;
     justify-content: space-between;
- }
+}
   
-cta-hero {
+.cta-hero {
     display: flex;
     justify-content: center;
     margin-top: 115px;
@@ -54,13 +54,13 @@ cta-hero {
   
  /* - - - - BLOQUE1 (HOME) - - - - */
   
-home-bloque1 {
+.home-bloque1 {
     padding-top: 160px;
     width: auto;
     margin-bottom: 160px;
 }
   
-home-projects-slider {
+.home-projects-slider {
     display: flex;
     justify-content: space-between;
     height: auto;
@@ -69,16 +69,16 @@ home-projects-slider {
     overflow-x: scroll;
     gap: 30px;
 
-    pj-slide {
+    .pj-slide {
         width: auto;
 
         img {
             width: 382px;
             border-radius: 15px;
-         }
-     }
+        }
+    }
 
-     bloque-cta {
+    .bloque-cta {
         margin-left: 60px;
         margin-right: 40px;
         padding: 0px;
@@ -91,25 +91,25 @@ home-projects-slider {
             font-weight: 600;
             text-align: center;
             margin-bottom: 40px;
-         }
-     }
+        }
+    }
 
-     bloque-cta-btn {
+    .bloque-cta-btn {
         width: 350px;
         text-align: center;
-     }
+    }
 }
   
   
- /* - - - - BLOQUE 2 (HOME) - - - - */
+/* - - - - BLOQUE 2 (HOME) - - - - */
   
-home-bloque2 {
+.home-bloque2 {
     width: auto;
     overflow: auto;
     margin-bottom: 160px;
 }
   
-featured-clients {
+.featured-clients {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -126,15 +126,15 @@ featured-clients {
   
  /* - - - - BLOQUE 3 (HOME) - - - - */
   
-home-bloque3 {
+.home-bloque3 {
     padding-bottom: 200px;
 
-    bloque-cta {
+    .bloque-cta {
         margin-top: 90px;
-     }
+    }
 }
   
-main-servicios {
+.main-servicios {
     margin-top: 80px;
     display: flex;
     flex-flow: row wrap;
@@ -143,7 +143,7 @@ main-servicios {
     padding-right: 45px;
     margin-bottom: 80px;
 
-    servicio {
+    .servicio {
         width: 250px;
         height: auto;
         display: flex;
@@ -152,7 +152,7 @@ main-servicios {
         h3 {
             line-height: 40px;
             margin-bottom: 0px;
-         }
+        }
 
         p {
         margin-top: 18px;
@@ -169,13 +169,13 @@ main-servicios {
                 font-weight: 700;
                 color: $azul-sec;
                 font-size: 23px;
-             }
-         }
+            }
+        }
     }
 }
 
   
-icono-servicio {
+.icono-servicio {
     text-align: center;
     margin-bottom: 40px;
 
@@ -201,7 +201,7 @@ icono-servicio {
 
     /* - - - - bloque hero - - - - */
 
-    bloque-hero {
+    .bloque-hero {
         padding: 100px 40px 70px 40px;
         background-size: auto;
         background-blend-mode: normal;
@@ -215,14 +215,14 @@ icono-servicio {
         }
     }
     
-    texto-hero {
+    .texto-hero {
         width: auto;
         justify-content: start;
         padding-top: 5px;
         margin-left: -20px;
     }
     
-    video-hero {
+    .video-hero {
         justify-content: center;
 
         iframe {
@@ -233,14 +233,14 @@ icono-servicio {
         }
     }
     
-    intro-hero {
+    .intro-hero {
         display: flex;
         flex-flow: column wrap;
         gap: 60px;
         justify-content:center;
     }
     
-    cta-hero {
+    .cta-hero {
         display: flex;
         justify-content: center;
         margin-top: 80px;
@@ -249,13 +249,13 @@ icono-servicio {
     
     /* - - - - BLOQUE1 (HOME) - - - - */
     
-    home-bloque1 {
+    .home-bloque1 {
         padding-top: 130px;
         width: auto;
         margin-bottom: 80px;
     }
     
-    home-projects-slider {
+    .home-projects-slider {
         display: flex;
         justify-content: space-between;
         height: auto;
@@ -264,7 +264,7 @@ icono-servicio {
         overflow-x: scroll;
         gap: 10px;
 
-        pj-slide {
+        .pj-slide {
             width: auto;
 
             img {
@@ -273,7 +273,7 @@ icono-servicio {
             }
         }
 
-        bloque-cta {
+        .bloque-cta {
             margin-left: 60px;
             margin-right: 40px;
             padding: 0px;
@@ -287,7 +287,7 @@ icono-servicio {
             }
         }
 
-        bloque-cta-btn {
+        .bloque-cta-btn {
             width: 200px;
             text-align: center;
         }
@@ -296,13 +296,13 @@ icono-servicio {
     
     /* - - - - BLOQUE 2 (HOME) - - - - */
     
-    home-bloque2 {
+    .home-bloque2 {
         width: auto;
         overflow: auto;
         margin-bottom: 90px;
     }
     
-    featured-clients {
+    .featured-clients {
         flex-flow: column wrap;
         gap: 40px;
         margin-top: 60px;
@@ -315,16 +315,16 @@ icono-servicio {
     
     /* - - - - BLOQUE 3 (HOME) - - - - */
     
-    home-bloque3 {
+    .home-bloque3 {
         padding-bottom: 100px;
 
-        bloque-cta {
+        .bloque-cta {
             margin-top: 20px;
             width: 100%;
         }
     }
     
-    main-servicios {
+    .main-servicios {
         margin-top: 60px;
         display: flex;
         flex-flow: row wrap;
@@ -334,7 +334,7 @@ icono-servicio {
         margin-bottom: 0px;
     }
     
-    servicio {
+    .servicio {
         width: 156px;
         height: auto;
         display: flex;
@@ -355,7 +355,7 @@ icono-servicio {
         }
     }
     
-    icono-servicio {
+    .icono-servicio {
         text-align: left;
         margin-bottom: 25px;
 
