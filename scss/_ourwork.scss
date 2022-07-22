@@ -4,7 +4,7 @@
 .titulo-sec-sub {
     h4 {
         span {
-            color: $naranja;
+            color: map-get($colores, naranja);
             margin-bottom: 2px;
         }
     }
@@ -50,7 +50,7 @@
     height: auto;
     width: auto;
     padding: 7px 12px;
-    background-color: $azul-sec;
+    background-color: map-get($colores, azul-sec);
     border-radius: 7px;
     opacity: 90%;
 
@@ -108,7 +108,7 @@
 .titulo-sec-sub {
     h4 {
         span {
-            color: $naranja;
+            color: map-get($colores, naranja);
             margin-bottom: 0px;
         }
     }

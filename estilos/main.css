@@ -1,6 +1,15 @@
 @charset "UTF-8";
+/* - - - - MAPS Y MIXINS - - - - */
+.azul-ppal {
+  color: #05070b; }
+
+.azul-sec {
+  color: #141e30; }
+
+.naranja {
+  color: #ff4a0b; }
+
 /* - - - - VARS - - - - */
-/* colores */
 /* tipografia */
 /* - - - - SCSS - - - - */
 :root {
@@ -124,7 +133,7 @@ p {
   color: #ff4a0b; }
 
 /* - - - - BOTONES - - - - */
-.btn-ppales {
+.botones, .btn-ppales, .btn-secundarios {
   font-family: "Barlow", sans-serif;
   letter-spacing: 2px;
   font-size: 20px;
@@ -138,33 +147,23 @@ p {
   background-color: #ff4a0b;
   padding: 14px 88px;
   cursor: pointer; }
-  .btn-ppales:hover {
-    outline: #ff4a0b solid 4px;
+  .botones:hover, .btn-ppales:hover, .btn-secundarios:hover {
+    outline: solid 4px;
     border-radius: 10px;
     background-color: transparent;
     color: #ff4a0b;
     font-weight: 700;
     transition: 0.3s; }
 
+.btn-ppales:hover {
+  outline-color: #ff4a0b; }
+
 .btn-secundarios {
-  font-family: Barlow, sans-serif;
-  letter-spacing: 2px;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 10px;
-  border-style: none;
-  background-color: #141e30;
-  padding: 14px 88px;
-  color: white;
-  cursor: pointer; }
+  background-color: #141e30; }
   .btn-secundarios:hover {
-    outline: #141e30 solid 4px;
-    border-radius: 10px;
+    outline-color: #141e30;
     background-color: transparent;
-    color: #141e30;
-    font-weight: 700;
-    transition: 0.3s; }
+    color: #141e30; }
 
 .bloque-cta-btn {
   display: flex;
@@ -295,12 +294,7 @@ p {
   p {
     font-size: 12px; }
   /* - - - - BOTONES - - - - */
-  .btn-ppales {
-    letter-spacing: 1px;
-    font-size: 16px;
-    border-radius: 7px;
-    padding: 12px 42px 14px 42px; }
-  .btn-secundarios {
+  .btn-mobile, .btn-ppales, .btn-secundarios {
     letter-spacing: 1px;
     font-size: 16px;
     border-radius: 7px;
@@ -514,13 +508,15 @@ p {
   .home-bloque1 {
     padding-top: 130px;
     width: auto;
-    margin-bottom: 80px; }
+    margin-bottom: 50px;
+    padding-bottom: 0px; }
   .home-projects-slider {
     display: flex;
     justify-content: space-between;
     height: auto;
     width: 100%;
     margin-top: 40px;
+    margin-bottom: 0px;
     overflow-x: scroll;
     gap: 10px; }
     .home-projects-slider .pj-slide {
@@ -546,11 +542,14 @@ p {
   .home-bloque2 {
     width: auto;
     overflow: auto;
-    margin-bottom: 90px; }
+    margin-bottom: 100px;
+    padding-bottom: 0px;
+    margin-top: 0px; }
   .featured-clients {
     flex-flow: column wrap;
     gap: 40px;
-    margin-top: 60px; }
+    margin-top: 0px;
+    padding-top: 0px; }
     .featured-clients img {
       height: 50px; }
   /* - - - - BLOQUE 3 (HOME) - - - - */
@@ -944,7 +943,8 @@ p {
     font-family: "Barlow", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    border: solid #141e30;
+    border: solid;
+    border-color: #141e30;
     border-radius: 7px; }
     .form-message textarea ::placeholder {
       color: #a6a6a6;

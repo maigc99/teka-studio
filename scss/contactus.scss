@@ -29,14 +29,14 @@
   
 .personal-info {
     border-radius: 15px;
-    border: 2.5px $naranja solid;
+    border: 2.5px #ff4a0b solid;
     width: 700px;
 
     legend {
         font-size: 20px;
         font-weight: 600;
         letter-spacing: 2px;
-        color: $naranja;
+        color: map-get($colores, naranja);
         text-align: left;
         margin-top: -15px;
         margin-bottom: 30px;
@@ -51,7 +51,7 @@
     label {
         font-size: 24px;
         font-weight: 500;
-        color: $azul-sec;
+        color: map-get($colores, azul-sec);
         margin-left: 30px;
     }
 }
@@ -82,7 +82,7 @@
     label {
         font-size: 24px;
         font-weight: 500;
-        color: $azul-sec;
+        color: map-get($colores, azul-sec);
         margin-left: 33px;
     }
 
@@ -93,7 +93,8 @@
         font-family: $font;
         font-size: 18px;
         font-weight: 400;
-        border: solid $azul-sec;
+        border: solid;
+        border-color: map-get($colores, azul-sec);
         border-radius: 7px;
 
         ::placeholder {

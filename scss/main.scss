@@ -1,10 +1,26 @@
+/* - - - - MAPS Y MIXINS - - - - */
+
+
+$colores: (
+    azul-ppal: #05070b,
+    azul-sec: #141e30,
+    naranja: #ff4a0b
+);
+
+@each $key, $valor in $colores {
+    .#{$key}{
+        color: $valor;
+    }
+}
+
+
+@mixin flex-base($display, $flex-flow){
+    display: $display;
+    flex-flow: $flex-flow;
+}
+
+
 /* - - - - VARS - - - - */
-
-/* colores */
-
-$azul-ppal: #05070b;
-$azul-sec: #141e30;
-$naranja: #ff4a0b;
 
 /* tipografia */
 
@@ -123,17 +139,17 @@ $font: 'Barlow', sans-serif;
         font-size: 18px;
         font-weight: 500;
         text-decoration: none;
-        color: $azul-ppal;
+        color: map-get($colores, azul-ppal);
 
         &:hover {
             font-weight: 700;
-            color: $azul-sec;
+            color: map-get($colores, azul-sec);
         }
     }
 }
 
 .navbar-toggler {
-    color: $azul-ppal;
+    color: map-get($colores, azul-ppal);;
     border-style: none;
     width: 60px;
     text-align: center;
@@ -145,19 +161,19 @@ $font: 'Barlow', sans-serif;
 h1 {
     font-size: 55px;
     font-weight: 500;
-    color: $naranja;
+    color: map-get($colores, naranja);
 }
   
 h2 {
     font-size: 40px;
     font-weight: 700;
-    color: $azul-sec;
+    color: map-get($colores, azul-sec);
 }
   
 h3 {
     font-size: 36px;
     font-weight: 500;
-    color: $azul-sec;
+    color: map-get($colores, azul-sec);
     line-height: normal;
 }
   
@@ -174,13 +190,13 @@ p {
 }
   
 .destacado-naranja {
-    color: $naranja;
+    color: map-get($colores, naranja);
 }
   
   
 /* - - - - BOTONES - - - - */
-  
-.btn-ppales {
+
+.botones {
     font-family: $font;
     letter-spacing: 2px;
     font-size: 20px;
@@ -191,46 +207,41 @@ p {
     border-radius: 10px;
     border-color: none;
     border-width: 0px;
-    background-color: $naranja;
+    background-color: map-get($colores, naranja);
     padding: 14px 88px;
     cursor: pointer;
 
     &:hover {
-        outline: $naranja solid 4px;
+        outline: solid 4px;
         border-radius: 10px;
         background-color: transparent;
-        color: $naranja;
+        color: map-get($colores, naranja);
         font-weight: 700;
         transition :0.3s;
-     }
+    }
+}
+
+.btn-ppales {
+    @extend .botones;
+
+    &:hover {
+        outline-color: map-get($colores, naranja);
+    }
 }
 
 .btn-secundarios {
-    font-family: Barlow, sans-serif;
-    letter-spacing: 2px;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 10px;
-    border-style: none;
-    background-color: #141e30;
-    padding: 14px 88px;
-    color: white;
-    cursor: pointer;
+    @extend .botones;
+    background-color: map-get($colores, azul-sec);
 
     &:hover {
-        outline: $azul-sec solid 4px;
-        border-radius: 10px;
+        outline-color: map-get($colores, azul-sec);
         background-color: transparent;
-        color: $azul-sec;
-        font-weight: 700;
-        transition :0.3s;
+        color: map-get($colores, azul-sec);
      }
 }
 
 .bloque-cta-btn {
-    display: flex;
-    flex-flow: row wrap;
+    @include flex-base(flex, row wrap);
     gap: 20px;
     justify-content: center;
 }
@@ -263,10 +274,9 @@ p {
 /* - - - - FOOTER - - - - */
   
 .footer {
-    display: flex;
-    flex-flow: column wrap;
+    @include flex-base(flex, column wrap);
     align-content: center;
-    background-color: $azul-sec;
+    background-color: map-get($colores, azul-sec);
     font-size: 16px;
     font-weight: 400;
     color: white;
@@ -358,8 +368,7 @@ p {
     .header {
         height: auto;
         width: 100vw;
-        display: flex;
-        flex-flow: column wrap;
+        @include flex-base(flex, column wrap);
         padding: 0px 20px 5px 40px;
         box-shadow: 0px 1px 20px 0px rgb(105, 102, 102);
         z-index: 10000;
@@ -432,23 +441,23 @@ p {
 
     /* - - - - BOTONES - - - - */
   
-    .btn-ppales {
+    .btn-mobile {
         letter-spacing: 1px;
         font-size: 16px;
         border-radius: 7px;
         padding: 12px 42px 14px 42px;
+    }
+    
+    .btn-ppales {
+        @extend .btn-mobile;
     }
     
     .btn-secundarios {
-        letter-spacing: 1px;
-        font-size: 16px;
-        border-radius: 7px;
-        padding: 12px 42px 14px 42px;
+        @extend .btn-mobile;
     }
     
     .bloque-cta-btn {
-        display: flex;
-        flex-flow: row wrap;
+        @include flex-base(flex, row wrap);
         gap: 20px;
         justify-content: center;
     }

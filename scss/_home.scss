@@ -165,12 +165,12 @@
             font-size: 21px;
             font-weight: 600;
             text-decoration: none;
-            color: $naranja;
+            color: map-get($colores, naranja);
             margin-top: 20px;
 
             &:hover {
                 font-weight: 700;
-                color: $azul-sec;
+                color: map-get($colores, azul-sec);
                 font-size: 23px;
             }
         }
@@ -255,7 +255,8 @@
     .home-bloque1 {
         padding-top: 130px;
         width: auto;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
+        padding-bottom: 0px;
     }
     
     .home-projects-slider {
@@ -264,6 +265,7 @@
         height: auto;
         width: 100%;
         margin-top: 40px;
+        margin-bottom: 0px;
         overflow-x: scroll;
         gap: 10px;
 
@@ -305,13 +307,16 @@
     .home-bloque2 {
         width: auto;
         overflow: auto;
-        margin-bottom: 90px;
+        margin-bottom: 100px;
+        padding-bottom: 0px;
+        margin-top: 0px;
     }
     
     .featured-clients {
         flex-flow: column wrap;
         gap: 40px;
-        margin-top: 60px;
+        margin-top: 0px;
+        padding-top: 0px;
 
         img {
             height: 50px;
