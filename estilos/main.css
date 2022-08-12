@@ -289,10 +289,10 @@ p {
   h3 {
     font-size: 21px; }
   h4 {
-    font-size: 16px;
+    font-size: 18px;
     width: auto; }
   p {
-    font-size: 12px; }
+    font-size: 15px; }
   /* - - - - BOTONES - - - - */
   .btn-mobile, .btn-ppales, .btn-secundarios {
     letter-spacing: 1px;
@@ -508,7 +508,7 @@ p {
   .home-bloque1 {
     padding-top: 130px;
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding-bottom: 0px; }
   .home-projects-slider {
     display: flex;
@@ -544,11 +544,11 @@ p {
     overflow: auto;
     margin-bottom: 100px;
     padding-bottom: 0px;
-    margin-top: 0px; }
+    margin-top: -40px; }
   .featured-clients {
     flex-flow: column wrap;
     gap: 40px;
-    margin-top: 0px;
+    margin-top: 60px;
     padding-top: 0px; }
     .featured-clients img {
       height: 50px; }
